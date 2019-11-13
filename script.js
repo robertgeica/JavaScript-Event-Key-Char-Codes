@@ -1,15 +1,28 @@
-function uniCharCode(event) {
-    var char = event.which || event.keyCode;
-    document.getElementById("demo").innerHTML = "Unicode character code is " + char;
-}
 
-function uniKeyCode(event) {
-    var key = event.keyCode;
-    document.getElementById("demo2").innerHTML = "Unicode key code is " + key;
-}
+const pressKey = document.getElementById('press-key');
 
-document.onkeydown = function(e) {
-    e = e || window.event;
-    document.getElementById("demo").innerHTML = "Unicode character code is " + char;
+window.addEventListener('keydown', (e) => {
+    console.log(e);
+    pressKey.innerHTML = `
 
-}
+        <div class="pressKey">
+            ${e.key}
+        </div>
+        
+        <div class="card">
+            ${e.key === ' ' ? 'Space' : e.key}
+            <small>event.key<small>
+        </div>
+
+        <div class="card">
+            ${e.keyCode}
+            <small>event.keyCode</small>
+        </div>
+        
+        <div class="card">
+            ${e.code}
+            <small>event.code</small>
+        </div
+    
+    `
+});

@@ -1,34 +1,58 @@
 @import url('https://fonts.googleapis.com/css?family=Turret+Road&display=swap');
 
+* {
+	box-sizing: border-box;
+}
+
 body {
-    font-family: 'Turret Road', cursive;
     background: url("background.png");
     background-repeat: no-repeat;
     background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	margin: 0;
+    font-family: 'Turret Road', cursive;
 }
 
-h1, input, p {
+.pressKey {
+    font-size: 5em;
+    text-align: center;
+    padding-bottom: 50px;;
+    
+}
+
+#text {
+    font-size: 3em;
     text-align: center;
 }
 
-h1 {
-    margin-top: 1em;
-    font-size: 32px;
+.card {
+	display: inline-flex;
+	position: relative;
+	flex-direction: column;
+	align-items: center;
+	min-width: 150px;
+	margin: 20px;
+	padding: 15px 50px;
+	font-size: 32px;
+	background-color: #fff;
+    border: 2px solid #8f8f8f;
+    border-top: 25px solid #8f8f8f;
+    border-radius: 5%;
+
 }
 
-input {
-    display: block;
-    margin-top: 4em;
-    margin-left: auto;
-    margin-right: auto;
+.card small {
+    position: absolute;
+    top: -30px;
+    padding: 10px;
+	width: 100%;
+    text-align: center;
+	font-size: 16px;
+    color: black;
     
-    width: 10%;
-}
-
-p, #demo, #demo2 {
-    font-size: 24px;
-}
-
-#demo, #demo2 {
-    font-weight: 600;
+    border-top-right-radius: 5%;
+    border-top-left-radius: 5%;
 }
